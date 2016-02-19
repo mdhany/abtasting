@@ -1,0 +1,27 @@
+<div class="container" id="vaso" style="display: none;">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- OLD GATE -->
+          <div class="oldgate">
+             <h1 class="text-hide">Absolut Electrik Cocktail Tasting <%= image_tag 'tl-atasting.png', class: 'img-responsive center-block' %></h1>
+            <h3></h3>
+
+            <div class="row contenedor-botones">
+              <div class="col-sm-12">
+                <%= link_to "javascript:;", class: 'seleccion-imagen btn-vaso', id: 's-sparkling', value: 'Sparkling' do -%>
+                  <%= image_tag 'v-sparkling.png' -%>
+                <% end -%>
+
+                <%= link_to "javascript:;", class: 'seleccion-imagen btn-vaso', id: 's-flat', value: 'Flat' do -%>
+                  <%= image_tag 'v-flat.png', style: 'margin-left:60px;' -%>
+                <% end -%>
+               
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @customer.birth %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @customer.mobile %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @customer.interest %>
+</p>
+
+<hr>
+
+<p>
+  <strong>Sabor preferido:</strong>
+  <%= @customer.taste %>
+</p>
+
+<p>
+  <strong>Tipo de trago:</strong>
+  <%= @customer.glass %>
+</p>
+
+<p>
+  <strong>Premio (Cocktail):</strong>
+  <%= @customer.cocktail %>
+</p>
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

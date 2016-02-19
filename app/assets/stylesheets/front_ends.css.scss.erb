@@ -1,0 +1,210 @@
+// Place all the styles related to the FrontEnds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* FONTS */
+@font-face {
+  font-family: 'Absolut';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Absolut'), local('Abosult-Regular'), url(/fonts/Abosult-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Absolut';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Absolut Medium'), local('Abosult-Medium'), url(/fonts/Abosult-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'Absolut';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Absolut Bold'), local('Abosult-Bold'), url(/fonts/Abosult-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Absolut';
+  font-style: bold;
+  font-weight: 800;
+  src: local('Absolut Headline'), local('AbosultHeadline'), url(/fonts/AbosultHeadline.otf) format('otf');
+}
+
+/* FONTS */
+
+body{
+  background-image: url(<%= asset_path("Absolut-App.jpg") %>);
+  background-color: black;
+  background-repeat: repeat-x;
+  background-position: top center;
+
+  color: white;
+  text-align: center;
+  font-family: 'Absolut', Arial,sans-serif;
+}
+
+body.estilo2{
+  background-image: url(<%= asset_path("Fondo-home.jpg") %>);
+}
+
+body.estilo3{
+  background-image: url(<%= asset_path("fondo-textura.jpg") %>);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 70px;
+}
+
+p {
+  font-style: normal;
+  font-size: 18px;
+}
+
+.seleccion-imagen:hover, .seleccion-imagen:focus{
+  opacity: 0.5
+}
+
+.contenedor-botones{
+  padding-top: 30px;
+}
+
+.margen20{
+  padding-top: 20px;
+}
+
+.margen10{
+  margin-top: 10px;
+}
+
+.btn-absolut,  #club input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 5px 30px;
+  min-width: 140px;
+  border-radius: 0;
+  border: 0;
+
+  box-shadow: 0px 0px 3px 2px #0093d5;
+  margin-right: 10px;
+
+}
+
+.botonfinal{
+      margin-top: -20px;
+}
+
+.oldgate{
+  padding-top: 60px;
+
+}
+
+.topmargen{
+  margin-top: 190px;
+}
+
+
+footer{
+  margin-top:90px;
+}
+
+
+/*CLUB*/
+#club{
+  text-align: left;
+  color: white;
+  margin-bottom: 40px;
+}
+
+ #club .center-block{
+  max-width: 550px;
+  margin: 0 auto;
+}
+ #club label{
+    font-weight: normal;
+    font-size: 18px;
+}
+ #club .field{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+ #club .checkes input[type="checkbox"]{
+  display: none;
+}
+ #club .checkes label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+}
+
+ #club .checkes label:before {
+  content: "";
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  background-color: #000;
+  border: 0;
+  box-shadow: 0px 0px 3px 2px #0093d5;
+  }
+
+ #club .checkes input[type=checkbox]:checked + label:before {
+  content: "\2713";
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+ .chivas-form{
+    background: none repeat scroll 0 0 #000;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    font: 16px;
+    margin: 0 0 20px;
+    max-width: 100%;
+    outline: medium none;
+    padding: 15px 4px;
+    width: 100%;
+
+    box-shadow: 0px 0px 3px 2px #0093d5;
+
+}
+
+ #club select{
+    -moz-appearance: none;
+    background: #000;
+    border: 0;
+    box-sizing: border-box;
+    height: 42px;
+    min-width: 140px;
+    padding: 5px;
+    text-indent: 0.01px;
+    text-overflow: "";
+    color: white;
+    box-shadow: 0px 0px 3px 2px #0093d5;
+}
+
+#club .red{ color: red}
+ input#picture{
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  text-align: center ;
+}
+
+ .btn-fb{
+  padding: 20px;
+
+}

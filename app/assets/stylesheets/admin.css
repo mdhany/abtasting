@@ -1,0 +1,16 @@
+ /*
+ *= require "font-awesome/css/font-awesome.min"
+ *= require "bootstrap/css/bootstrap.min"
+ *= require "uniform/css/uniform.default"
+ *= require "admin/style-metronic"
+ *= require "admin/style"
+ *= require "admin/style-responsive"
+ *= require "admin/plugins"
+ *= require "admin/default"
+ *= require "admin/green"
+ *= require "admin/pages/login"
+ *= require_self
+
+ */
+
+ .blueab{ color: #0093d5; }

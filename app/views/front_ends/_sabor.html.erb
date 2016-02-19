@@ -1,0 +1,29 @@
+<div class="container" id="sabor" style="display: none;">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- OLD GATE -->
+          <div class="oldgate">
+             <h1 class="text-hide">Absolut Electrik Cocktail Tasting <%= image_tag 'tl-atasting.png', class: 'img-responsive center-block' %></h1>
+            <h3>¿Qué sabor prefieres?</h3>
+
+            <div class="row contenedor-botones">
+              <div class="col-sm-12">
+
+                <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-frutal', value: 'Frutal' do -%>
+                  <%= image_tag 's-frutal.png', class: '' -%>
+                <% end -%>
+                <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-especias', value: 'Especiado' do -%>
+                  <%= image_tag 's-especias.png', class: '' -%>
+                <% end -%>
+                <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-agrio', value: 'Agridulce' do -%>
+                  <%= image_tag 's-agrio.png', class: '' -%>
+                <% end -%>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+  
+    </div>

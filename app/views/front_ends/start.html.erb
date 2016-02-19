@@ -1,0 +1,113 @@
+<div class="container" id="oldgate" style="">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- OLD GATE -->
+          <div class="oldgate">
+            <%= image_tag 'logo-turn.png', class: 'img-responsive center-block' %>
+            <h1 class="text-hide">¿tienes 18 años o mas? <%= image_tag 'tl-edad.png', class: 'img-responsive center-block' %></h1>
+            <p>Al participar aceptas nuestros términos y condiciones, <br>así como nuestra política de privacidad</p>
+
+            <div class="row contenedor-botones">
+              <div class="col-sm-6 col-md-offset-3">
+                <%= link_to "Sí", "javascript:;", class: 'btn btn-lg btn-absolut e-yes' %>
+      <%= link_to "No", "javascript:;", class: 'btn btn-lg btn-absolut e-no' %>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+</div>
+<%= render 'welcome' %>
+<%= render 'sabor' %>
+<%= render 'vaso' %>
+<%= render 'cocktail' %>
+
+
+
+<%= javascript_tag do -%>
+    //Edad: Si
+    $('.e-yes').click(function() {
+    	$("body").addClass( "estilo2" );
+        $( "#oldgate" ).slideUp( "fast" ),
+        $( "#welcome" ).slideDown( "fast" );
+    });
+
+    //Edad: NO
+    $('.e-no').click(function() {
+        alert("Lo sentimos. Debes ser mayor de edad para participar.");
+    });
+
+    //WELCOME
+    $('.iniciar').click(function() {
+    	$("body").removeClass( "estilo2" );
+        $( "#welcome" ).slideUp( "fast" ),
+        $( "#sabor" ).slideDown( "fast" );
+    });
+
+    //SABOR
+    $('.btn-sabor').click(function() {
+        $( "#sabor" ).slideUp( "fast" ),
+        $( "#vaso" ).slideDown( "fast" );
+
+        //Getting DATA
+        var sabor = $(this).attr("value");
+        $("input[name=taste]").attr('value', sabor);
+    	//alert( $("input[name=taste]").attr('value'));
+    });
+
+    //VASO
+    $('.btn-vaso').click(function() {
+    	//Getting DATA
+        var vaso = $(this).attr("value");
+        $("input[name=glass]").attr('value', vaso);
+		
+		//Llamando funcion que carga el cocktail
+		var sabor = $('input[name=taste]').attr("value");
+        cocktailresult(sabor, vaso);
+
+
+    	//Animacion y cambio de vista
+        $( "#vaso" ).slideUp( "fast" ),
+        $( "#cocktail" ).slideDown( "fast" );
+
+        
+    });
+
+function cocktailresult(sabor, vaso) {
+//Si cumple las condiciones,
+	if (sabor == 'Frutal' && vaso == 'Sparkling' ) {
+		//alert('Lychee Cooler');
+		// Mostrar el Cocktail correspondiente
+		$('.cock-lychee').show();
+
+		// Agregar nombre de CK a input hidden.
+		$("input[name=cocktail]").attr('value', 'Lychee Cooler');
+
+	} else if (sabor == 'Agridulce' && vaso == 'Sparkling' ) {
+		//alert('Lychee Cooler');
+		// Mostrar el Cocktail correspondiente
+		$('.cock-lychee').show();
+		$("input[name=cocktail]").attr('value', 'Lychee Cooler');
+	
+	} else if ((sabor == 'Agridulce') && vaso == 'Flat' ) {
+		//alert('Electrik Blue');
+		// Mostrar el Cocktail correspondiente
+		$('.cock-electrik').show();
+		$("input[name=cocktail]").attr('value', 'Electrik Blue');
+	
+	} else {
+		//alert('Neon Nights');
+		// Mostrar el Cocktail correspondiente
+		$('.cock-neon').show();
+		$("input[name=cocktail]").attr('value', 'Neon Nights');
+
+}
+	
+	
+	
+}
+
+
+<% end -%>

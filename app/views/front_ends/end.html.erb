@@ -1,0 +1,27 @@
+<div class="container" id="final">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- OLD GATE -->
+          <div class="topmargen">
+             <%= image_tag 'tl-gracias.png', class: 'img-responsive center-block' %>
+
+            <div class="row contenedor-botones">
+              <div class="col-sm-12">
+                
+                <%= link_to "Volver a iniciar", root_path, id: 'btn-return', class: 'btn btn-lg btn-absolut margen10' %>
+              
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= javascript_tag do -%>
+
+    	$("body").addClass( "estilo3" );
+
+    <% end %>
