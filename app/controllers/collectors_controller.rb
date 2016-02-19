@@ -1,6 +1,6 @@
 class CollectorsController < ApplicationController
   #before_filter :authenticate_collector!
-  #before_action :set_collector, only: [:show, :edit, :update]
+  before_action :set_collector, only: [:show, :edit, :update]
 
 
   def event
@@ -18,6 +18,19 @@ class CollectorsController < ApplicationController
 
   def index
     @collectors = ::Collector::all
+  end
+
+  def new
+    @collector = ::Collector.new
+  end
+
+  def create_direct
+    @collector = ::Collector.new({name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation]})
+    if @collector.save
+      redirect_to collector_index_path, notice: 'La promotora fue creada exitosamente.'
+    end  
+
+
   end
 
   #def edit
@@ -40,7 +53,7 @@ class CollectorsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def collector_params
-    params.require(:collector).permit(:event_id, :remember_me, :name, :email, :password, :password_confirmation, :event_id)
+    params.require(:collector).permit(:event_id, :remember_me, :name, :email, :password, :password_confirmation)
   end
 
 end

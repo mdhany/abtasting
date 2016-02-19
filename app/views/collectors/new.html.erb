@@ -1,6 +1,6 @@
 <h2>Crear Promotora</h2>
 
-<%= form_for(@collector) do |f| %>
+<%= form_tag(create_direct_url, method: :post) do |f| %>
     <% if @collector.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@collector.errors.count, "error") %> prohibited this collector from being saved:</h2>
@@ -14,19 +14,19 @@
     <% end %>
 
 
-    <div><%= f.label :name %><br />
-      <%= f.text_field :name %></div>
+    <div><%= label_tag :name %><br />
+      <%= text_field_tag :name %></div>
 
-    <div><%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %></div>
+    <div><%= label_tag :email %><br />
+      <%= email_field_tag :email %></div>
 
-    <div><%= f.label 'Nueva Contraseña' %> <i></i><br />
-      <%= f.password_field :password, autocomplete: "off" %></div>
+    <div><%= label_tag 'Nueva Contraseña' %> <i></i><br />
+      <%= password_field_tag :password %></div>
 
-    <div><%= f.label 'Confirmacion de Contraseña' %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <div><%= label_tag 'Confirmacion de Contraseña' %><br />
+      <%= password_field_tag :password_confirmation %></div>
 
-    <div><%= f.submit "Crear" %></div>
+    <div><%= submit_tag "Crear" %></div>
 <% end %>
 
 <%= link_to "Back", :back %>
