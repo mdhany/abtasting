@@ -14,6 +14,20 @@ class FrontEndsController < ApplicationController
   def end
   end
 
+  def no_customer_filled
+    if request.post?
+      if Entry.create!(
+          event_id: current_collector.event_id, 
+          collector_id: current_collector.id,
+          taste: session[:sabor],
+          glass: session[:vaso],
+          cocktail: session[:cocktail]
+          )
+        redirect_to end_path
+      end
+    end
+  end
+
   def save_coktail_session
   	session[:sabor] = params[:taste]
   	session[:vaso] = params[:glass]

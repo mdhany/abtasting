@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   root 'front_ends#start'
 
-  post 'no_customer_filled', to: 'mobile#no_customer_filled', as: 'no_customer_filled'
+  post 'no_customer_filled', to: 'front_ends#no_customer_filled', as: 'no_customer_filled'
   
   get 'collectors/new', to: 'collectors#new', as: 'new_collector'
   post 'collectors/create_direct', to: 'collectors#create_direct', as: 'create_direct'

@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
   respond_to :html
 
   def index
-    @entries = Entry.all
+    @entries = Entry.all.order('created_at DESC')
     respond_with(@entries)
   end
 
@@ -43,6 +43,6 @@ class EntriesController < ApplicationController
     end
 
     def entry_params
-      params.require(:entry).permit(:customer_id, :event_id, :user_id, :collector_id)
+      params.require(:entry).permit(:customer_id, :event_id, :user_id, :collector_id, :taste, :glass, :cocktail)
     end
 end

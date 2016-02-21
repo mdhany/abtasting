@@ -26,11 +26,25 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    #puts customer_params
+    date = Date.new customer_params["birth(1i)"].to_i, customer_params["birth(2i)"].to_i, customer_params["birth(3i)"].to_i
+    @customer = Customer.new({
+      name: customer_params[:name],
+      birth: date,
+      city: customer_params[:city],
+      mobile: customer_params[:mobile],
+      email: customer_params[:email],
+      interest: customer_params[:interest]})
 
     respond_to do |format|
       if @customer.save
-        en = @customer.create_entry!(event_id: current_collector.event_id, collector_id: current_collector.id)
+        en = @customer.create_entry!(
+          event_id: current_collector.event_id, 
+          collector_id: current_collector.id,
+          taste: customer_params[:taste],
+          glass: customer_params[:glass],
+          cocktail: customer_params[:cocktail]
+          )
         if en
           logger.debug "Entrada #{session[:customer_id]} creada"
           @customer.update_attribute :entry_id, en.id
@@ -78,6 +92,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:name, :birth, :city, :mobile, :email, :interest, :taste, :glass, :cocktail, :entry_id)
+      params.require(:customer).permit(:name, :birth, :city, :mobile, :email, :interest, :entry_id, :taste, :glass, :cocktail)
     end
 end

@@ -48,14 +48,12 @@
     <%= f.hidden_field :glass, :value => session[:vaso] %>
     <%= f.hidden_field :cocktail, :value => session[:cocktail] %>
 
-    <% puts session[:cocktail] %>
-
-
   </div>
   <div class="actions">
     <%= f.submit {[class: 'btn btn-lg btn-absolut']}%>
   </div>
     <br/>
+    <%= link_to "Consumidor sin data", {controller: 'front_ends', action: 'no_customer_filled'}, class: 'gris', method: :post %>
 <% end %>
 
 <%= javascript_tag do -%>

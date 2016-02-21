@@ -37,9 +37,9 @@
         <td><%= customer.city %></td>
         <td><%= customer.mobile %></td>
         <td><%= customer.email  %></td>
-        <td><%= customer.taste %></td>
-        <td><%= customer.glass %></td>
-        <td><%= customer.cocktail %></td>
+        <td><%= customer.entry.taste %></td>
+        <td><%= customer.entry.glass  %></td>
+        <td><%= customer.entry.cocktail %></td>
         <td><%= link_to 'Ver', customer %></td>
         <td><%= link_to 'Eliminar', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

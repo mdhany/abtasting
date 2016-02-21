@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218064721) do
+ActiveRecord::Schema.define(version: 20160221211246) do
 
   create_table "collectors", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20160218064721) do
     t.integer  "event_id"
   end
 
-  add_index "collectors", ["email"], name: "index_collectors_on_email", unique: true
-  add_index "collectors", ["reset_password_token"], name: "index_collectors_on_reset_password_token", unique: true
+  add_index "collectors", ["email"], name: "index_collectors_on_email", unique: true, using: :btree
+  add_index "collectors", ["reset_password_token"], name: "index_collectors_on_reset_password_token", unique: true, using: :btree
 
   create_table "customers", force: true do |t|
     t.string   "name"
@@ -42,13 +42,10 @@ ActiveRecord::Schema.define(version: 20160218064721) do
     t.string   "interest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "taste"
-    t.string   "glass"
-    t.string   "cocktail"
     t.integer  "entry_id"
   end
 
-  add_index "customers", ["email"], name: "index_customers_on_email", unique: true
+  add_index "customers", ["email"], name: "index_customers_on_email", unique: true, using: :btree
 
   create_table "entries", force: true do |t|
     t.integer  "customer_id"
@@ -57,6 +54,9 @@ ActiveRecord::Schema.define(version: 20160218064721) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "collector_id"
+    t.string   "taste"
+    t.string   "glass"
+    t.string   "cocktail"
   end
 
   create_table "events", force: true do |t|
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20160218064721) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

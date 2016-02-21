@@ -34,17 +34,17 @@
 
 <p>
   <strong>Sabor preferido:</strong>
-  <%= @customer.taste %>
+  <%= @customer.entry.taste %>
 </p>
 
 <p>
   <strong>Tipo de trago:</strong>
-  <%= @customer.glass %>
+  <%= @customer.entry.glass %>
 </p>
 
 <p>
   <strong>Premio (Cocktail):</strong>
-  <%= @customer.cocktail %>
+  <%= @customer.entry.cocktail %>
 </p>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
