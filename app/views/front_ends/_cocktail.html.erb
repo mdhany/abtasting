@@ -8,14 +8,14 @@
 
             <div class="row contenedor-botones">
               <div class="cock-lychee" style="display:none;">
-                <div class="col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-3">
+                <div class="col-sm-4 col-xs-6 col-md-3 col-sm-offset-1 col-md-offset-3">
                   <%= link_to "javascript:;", class: 'seleccion-imagen', id: 's-', value: 'Lychee Cooler' do -%>
                     <%= image_tag 'c-1Lychee.png', class: 'img-responsive' -%>
                   <% end -%>
                 </div>
 
-                <div class="col-sm-5 col-md-3">
-                  <p>El Cocktail que más se <br>acerca a tu gusto es:</p>
+                <div class="col-xs-6 col-sm-5 col-md-3">
+                  <p>El Cocktail que más se acerca a tu gusto es:</p>
 
                   <h2 class="margen20"><strong>Lychee Cooler</strong></h2>
                   <p><small>Absolut Vodka / Lychee Liqueur
@@ -25,14 +25,14 @@
               </div> <!-- Final del Cocktail -->
 
               <div class="cock-neon" style="display:none;">
-                <div class="col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-3">
+                <div class="col-sm-4 col-xs-6 col-md-3 col-sm-offset-1 col-md-offset-3">
                   <%= link_to "javascript:;", class: 'seleccion-imagen', id: 's-', value: 'Neon Nights' do -%>
                     <%= image_tag 'c-3neon.png', class: 'img-responsive' -%>
                   <% end -%>
                 </div>
 
-                <div class="col-sm-5 col-md-3">
-                  <p>El Cocktail que más se <br>acerca a tu gusto es:</p>
+                <div class="col-xs-6 col-sm-5 col-md-3">
+                  <p>El Cocktail que más se acerca a tu gusto es:</p>
 
                   <h2 class="margen20"><strong>Neon Nights</strong></h2>
                   <p><small>Absolut Vodka / Lemon Juice <br>
@@ -43,14 +43,14 @@ Soda water</small></p>
               </div> <!-- Final del Cocktail -->
 
               <div class="cock-electrik" style="display:none;">
-                <div class="col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-3">
+                <div class="col-sm-4 col-xs-6 col-md-3 col-sm-offset-1 col-md-offset-3">
                   <%= link_to "javascript:;", class: 'seleccion-imagen', id: 's-', value: 'Electrik Blue' do -%>
                     <%= image_tag 'c-2Electric.png', class: 'img-responsive' -%>
                   <% end -%>
                 </div>
 
-                <div class="col-sm-5 col-md-3">
-                  <p>El Cocktail que más se <br>acerca a tu gusto es:</p>
+                <div class="col-xs-6 col-sm-5 col-md-3">
+                  <p>El Cocktail que más se acerca a tu gusto es:</p>
 
                   <h2 class="margen20"><strong>Electrik Blue</strong></h2>
                   <p><small>Absolut Vodka / Blue Curaçao <br>
@@ -58,7 +58,7 @@ Soda water</small></p>
                 </div>  
               </div> <!-- Final del Cocktail -->
               
-              <div class="col-sm-3 col-sm-offset-6 botonfinal">
+              <div class="col-xs-7 col-md-3 col-sm-offset-4 col-md-offset-4 botonfinal">
                  <%= form_tag({action: :save_coktail_session}) do %>
                     <%= hidden_field_tag :taste, "" %>
                     <%= hidden_field_tag :glass, "" %>

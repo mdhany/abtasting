@@ -164,7 +164,7 @@ en:
     select:
       prompt: Por favor seleccione
     submit:
-      create: Crear %{model}
+      create: Enviar datos
       submit: Guardar %{model}
       update: Actualizar %{model}
   number:

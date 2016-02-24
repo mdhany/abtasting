@@ -7,16 +7,21 @@
             <h3>¿Qué sabor prefieres?</h3>
 
             <div class="row contenedor-botones">
-              <div class="col-sm-12">
+              <div class="col-xs-4 col-sm-4">
 
                 <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-frutal', value: 'Frutal' do -%>
-                  <%= image_tag 's-frutal.png', class: '' -%>
+                  <%= image_tag 's-frutal.png', class: 'img-responsive center-block' -%>
                 <% end -%>
+              </div>
+              <div class="col-xs-4 col-sm-4">
                 <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-especias', value: 'Especiado' do -%>
-                  <%= image_tag 's-especias.png', class: '' -%>
+                  <%= image_tag 's-especias.png', class: 'img-responsive center-block' -%>
                 <% end -%>
+
+              </div>
+              <div class="col-xs-4 col-sm-4">
                 <%= link_to "javascript:;", class: 'seleccion-imagen btn-sabor', id: 's-agrio', value: 'Agridulce' do -%>
-                  <%= image_tag 's-agrio.png', class: '' -%>
+                  <%= image_tag 's-agrio.png', class: 'img-responsive center-block' -%>
                 <% end -%>
               </div>
             </div>

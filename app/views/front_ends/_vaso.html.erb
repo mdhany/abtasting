@@ -7,15 +7,15 @@
             <h3></h3>
 
             <div class="row contenedor-botones">
-              <div class="col-sm-12">
+              <div class="col-xs-6 col-sm-6">
                 <%= link_to "javascript:;", class: 'seleccion-imagen btn-vaso', id: 's-sparkling', value: 'Sparkling' do -%>
-                  <%= image_tag 'v-sparkling.png' -%>
+                  <%= image_tag 'v-sparkling.png', class: 'img-responsive center-block' -%>
                 <% end -%>
-
+              </div>
+              <div class="col-xs-6 col-sm-6">
                 <%= link_to "javascript:;", class: 'seleccion-imagen btn-vaso', id: 's-flat', value: 'Flat' do -%>
-                  <%= image_tag 'v-flat.png', style: 'margin-left:60px;' -%>
+                  <%= image_tag 'v-flat.png', class: 'img-responsive center-block' -%>
                 <% end -%>
-               
               </div>
             </div>
 
