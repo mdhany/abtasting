@@ -27,7 +27,11 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     #puts customer_params
-    date = Date.new customer_params["birth(1i)"].to_i, customer_params["birth(2i)"].to_i, customer_params["birth(3i)"].to_i
+    if customer_params["birth(1i)"].nil?
+      date = Date.new(2,4,19)
+    else
+      date = Date.new customer_params["birth(1i)"].to_i, customer_params["birth(2i)"].to_i, customer_params["birth(3i)"].to_i
+    end
     @customer = Customer.new({
       name: customer_params[:name],
       birth: date,
