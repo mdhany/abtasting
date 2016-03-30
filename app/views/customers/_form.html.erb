@@ -84,3 +84,38 @@
 
     //]]>
 </script>
+
+<script type="text/javascript" charset="utf-8">
+    //<![CDATA[
+$(document).ready(function () {
+    $("#new_customer").validate({
+        rules: {
+            'customer[name]': "required",
+            'customer[birth(3i)]': {
+                required: true
+            },
+            'customer[birth(2i)]': {
+                required: true
+            },
+            'customer[birth(1i)]': {
+                required: true
+            },
+            'customer[email]': {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            'customer[name]': "Este campo es requerido",
+            'customer[birth(3i)]': "Seleccione una opción",
+            'customer[birth(2i)]': "Seleccione una opción",
+            'customer[birth(1i)]': "Seleccione una opción",
+            'customer[email]': "Digite un email válido"
+        }
+    });
+});
+
+$ = jQuery.noConflict();
+
+    //]]>
+</script>
