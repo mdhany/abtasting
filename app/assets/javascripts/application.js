@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= jquery.validate.min
-// require_tree .
+//= require jquery.validate.min
+//= require_tree .
 

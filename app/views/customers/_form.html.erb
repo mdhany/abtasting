@@ -71,23 +71,14 @@
 
 <% end -%>
 
-<script type="text/javascript" charset="utf-8">
-    //<![CDATA[
-    $(document).ready(function() {
-        //Deshabilitando los botones: No funciona en Firefox
-        $('#new_customer').submit(function(){
-            var btn = $(this).find("input[type=submit]:focus");
-            $(btn).attr("disabled", "disabled"), $(btn).val("Por favor espere...")
-            $(btn).fadeTo( "fast", 0.33 );
-        })
-    })
+<%= javascript_tag do -%>
 
-    //]]>
-</script>
-
-<script type="text/javascript" charset="utf-8">
-    //<![CDATA[
 $(document).ready(function () {
+// add required to date
+$( "#customer_birth_3i" ).attr( "required", "required" );
+$( "#customer_birth_2i" ).attr( "required", "required" );
+$( "#customer_birth_1i" ).attr( "required", "required" );
+
     $("#new_customer").validate({
         rules: {
             'customer[name]': "required",
@@ -112,10 +103,24 @@ $(document).ready(function () {
             'customer[birth(1i)]': "Seleccione una opción",
             'customer[email]': "Digite un email válido"
         }
-    });
-});
+    })
+})
 
 $ = jQuery.noConflict();
 
+<% end -%>
+
+<script type="text/javascript" charset="utf-8">
+    //<![CDATA[
+    $(document).ready(function() {
+        //Deshabilitando los botones: No funciona en Firefox
+        $('#new_customer').submit(function(){
+            var btn = $(this).find("input[type=submit]:focus");
+            $(btn).attr("disabled", "disabled"), $(btn).val("Por favor espere...")
+            $(btn).fadeTo( "fast", 0.33 );
+        })
+    })
+
     //]]>
 </script>
+
