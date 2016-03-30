@@ -17,3 +17,7 @@
 //= require jquery.validate.min
 //= require_tree .
 
+// La validacion de la fecha de nacimiento para funcionar en safari y ipads, debo tener lo siguiente:
+// - jquery.validate con require en application.js
+// - Añadir una segunda proteccion, utilizando jquery para agregar el attr required a cada select de las fechas.
+// - Colocamos en script block de validate en el mismo formulario, es decir, debajo. No desde aca.
